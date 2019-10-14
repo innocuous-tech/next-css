@@ -1,0 +1,46 @@
+{
+  "name": "@innocuous/next-css",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "module": "dist/next-css.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint"
+  },
+  "peerDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/optimize-css-assets-webpack-plugin": "^5.0.1",
+    "husky": "^3.0.9",
+    "np": "^5.1.1",
+    "tsdx": "^0.9.3",
+    "tslib": "^1.10.0",
+    "typescript": "^3.6.4"
+  },
+  "dependencies": {
+    "css-loader": "^3.2.0",
+    "extract-css-chunks-webpack-plugin": "^4.6.0",
+    "find-up": "^4.1.0",
+    "ignore-loader": "^0.1.2",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0"
+  }
+}
