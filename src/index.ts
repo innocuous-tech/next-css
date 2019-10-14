@@ -2,7 +2,7 @@ import webpack from 'webpack';
 import { defineCSSLoaderConfig } from './defineCSSLoaderConfig';
 import { nextConfig, nextCSSConfig } from '@types';
 
-const nextCSS = (nextConfig: nextConfig & nextCSSConfig) => {
+module.exports = (nextConfig: nextConfig & nextCSSConfig) => {
   return Object.assign({}, nextConfig || {}, {
     webpack(
       config: webpack.Configuration,
@@ -52,5 +52,3 @@ const nextCSS = (nextConfig: nextConfig & nextCSSConfig) => {
     },
   });
 };
-
-export default nextCSS;
