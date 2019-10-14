@@ -14,7 +14,6 @@
     "test": "tsdx test",
     "lint": "tsdx lint"
   },
-  "peerDependencies": {},
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint"
@@ -26,6 +25,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
+  "peerDependencies": {},
   "devDependencies": {
     "@types/jest": "^24.0.18",
     "@types/optimize-css-assets-webpack-plugin": "^5.0.1",
@@ -42,5 +42,13 @@
     "ignore-loader": "^0.1.2",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-loader": "^3.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/innocuous-tech/next-css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/innocuous-tech/next-css/issues"
+  },
+  "homepage": "https://github.com/innocuous-tech/next-css#readme"
 }
