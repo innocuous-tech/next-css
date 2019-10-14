@@ -72,15 +72,13 @@ export const defineCSSLoaderConfig = (
 
   // Get config from postcss config file if defined
   const postcssLoader = postcssConfigPath
-    ? getPostCSSConfigFromFile(postcssConfigPath)
-    : {
+    ? {
         loader: 'postcss-loader',
         options: Object.assign({}, postcssLoaderOptions, {
-          config: {
-            ...postcssLoaderOptions.config,
-          },
+          config: getPostCSSConfigFromFile(postcssConfigPath),
         }),
-      };
+      }
+    : undefined;
 
   const cssLoader = {
     loader: 'css-loader',
@@ -89,8 +87,8 @@ export const defineCSSLoaderConfig = (
       {
         modules: cssModules,
         sourceMap: dev,
-        importLoaders: loaders.length + (postcssLoader ? 1 : 0),
-        exportOnlyLocals: isServer,
+        importLoaders: loaders.length + (!!postcssLoader ? 1 : 0),
+        onlyLocals: isServer,
       },
       cssLoaderOptions
     ),
