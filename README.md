@@ -87,8 +87,11 @@ const withCSS = require('@zeit/next-css');
 module.exports = withCSS({
   cssModules: true,
   cssLoaderOptions: {
-    importLoaders: 1,
-    localIdentName: '[local]___[hash:base64:5]',
+    modules: {
+      localIdentName: process.env.NODE_ENV === 'production
+        ? '[hash:base64]'
+        : '[name]_[local]__[hash:base64:5]',
+    },
   },
 });
 ```
