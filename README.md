@@ -1,3 +1,7 @@
+# First-class CSS support landed
+
+Next.js 9.2.0 contains first-class support for CSS, deprecating the need for this project.
+
 # Fork of Next.js + CSS
 
 Import `.css` files in your Next.js project
